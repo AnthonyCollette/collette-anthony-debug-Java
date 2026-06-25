@@ -5,12 +5,15 @@ import java.io.IOException;
 import java.util.Map;
 
 public class WriteSymptomDataToFile implements ISymptomWriter {
-    Map<String, Integer> symptoms;
+    private String filename;
+    public WriteSymptomDataToFile (String filename) {
+        this.filename = filename;
+    }
 
     public void writeSymptoms(Map<String, Integer> symptoms) {
         if (symptoms != null) {
             try {
-                FileWriter writer = new FileWriter ("result.out");
+                FileWriter writer = new FileWriter (filename);
                 symptoms.forEach((symptom, value) -> {
                     try {
                     String text = symptom + ": " + value.toString() + "\n";
