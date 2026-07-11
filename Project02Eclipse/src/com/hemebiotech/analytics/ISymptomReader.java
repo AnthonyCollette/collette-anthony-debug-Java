@@ -12,9 +12,11 @@ import java.util.List;
  */
 public interface ISymptomReader {
 	/**
-	 * If no data is available, return an empty List
+     * Retrieves the raw list of symptoms obtained from the underlying data source.
+     *
+	 * If no data is available, an empty {@code List} is returned instead of {@code null}
 	 * 
 	 * @return a raw listing of all Symptoms obtained from a data source, duplicates are possible/probable
 	 */
-	List<String> GetSymptoms ();
+	List<String> getSymptoms ();
 }

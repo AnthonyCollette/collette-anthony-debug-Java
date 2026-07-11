@@ -20,7 +20,7 @@ public class WriteSymptomDataToFile implements ISymptomWriter {
      * Writes a specified map of symptoms and their occurrence to the file,
      * one line per symptom, in the format "symptom: count".
      *
-     * @param symptoms the map of symptoms to write with their occurrence
+     * @param symptoms the {@code Map<String, Integer>} of symptoms to write with their occurrence
      */
     public void writeSymptoms(Map<String, Integer> symptoms) {
         if (symptoms != null) {
